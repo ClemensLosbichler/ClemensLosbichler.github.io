@@ -12,7 +12,7 @@
     <title>Homepage</title>
   </head>
   <body>
-    <?php include "./header.html" ?>
+    <?php include("./header.html"); ?>
 
     <div class="container-fuid">
       <div class="row-md-12">
@@ -22,6 +22,6 @@
       </div>
     </div>
 
-    <?php include "./footer.html" ?>
+    <?php include("./footer.html"); ?>
   </body>
 </html>
