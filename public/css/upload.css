@@ -1,3 +1,11 @@
+#upload {
+    position: absolute;
+    margin-top: 5vh;
+    width: 50vw;
+    left: 0;
+    height: 60vh;
+}
+
 .box-header {
     color: #444;
     display: block;
@@ -37,17 +45,12 @@
   
 .dropzone,
 .dropzone:focus {
-    position: absolute;
+    position: relative;
     outline: none !important;
     width: 100%;
     height: 100%;
     cursor: pointer;
     opacity: 0;
-}
-  
-.dropzone-wrapper:hover,
-.dropzone-wrapper.dragover {
-    /*background: #ecf0f5;*/
 }
   
 .preview-zone {
@@ -57,8 +60,37 @@
 #swirl {
     margin: 0px; 
     padding: 0px; 
+    left: 0;
+    top: 0;
     position: absolute; 
     z-index: -2;
     width: 100%;
     height: 100%;
+}
+
+.contextmenu {
+    width: max-content;
+    z-index: 2;
+    box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    display: none;
+    transition: 0.2s display ease-in;
+    padding: 0;
+}
+.contextmenu .menu-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+.contextmenu .menu-options .menu-option {
+    font-weight: 500;
+    z-index: 1;
+    font-size: 14px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+.contextmenu .menu-options .menu-option:hover {
+    background: rgba(0, 0, 0, 0.2);
 }

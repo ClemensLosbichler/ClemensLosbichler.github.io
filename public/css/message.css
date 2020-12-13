@@ -1,0 +1,56 @@
+#input {
+    position: relative;
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    resize: none;
+    padding: 5px;
+    font-size: xx-large;
+    font-family: 
+}
+
+#submit {
+    display: block;
+    position: relative;
+    margin-top: 20px;
+}
+
+#form {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+.form-input {
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+#message-block {
+    z-index: 100;
+    background-color: white;
+    cursor: pointer;
+}
+#message {
+    position: relative;
+    color: #000;
+}
+
+.clean {
+    font-family: titillium-web, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.magic {
+    font-family: Impact;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.chantal {
+    font-family: chantal, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}

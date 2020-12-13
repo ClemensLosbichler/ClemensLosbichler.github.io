@@ -26,6 +26,10 @@ $(".dropzone-wrapper").on("dragleave", function() {
     $("#swirl").fadeOut(600);
 });
 
+$(".dropzone-wrapper").on("drop", function() {
+  $("#swirl").fadeOut(600);
+});
+
 var particles = [];
 for(var x = 0; x < starNum; x++) {
     let px = Math.sin(x*0.1) * 1.2 * canvas.width/2 + canvas.width/2;

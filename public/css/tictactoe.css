@@ -1,0 +1,157 @@
+.fill {
+    width: 100%;
+}
+
+#game-mode-choice {
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+#game-mode-choice label {
+    border: 1px solid #e2e6ea;
+    color: #495057;
+    border-radius: 5px;
+    padding: 5px;
+}
+#game-mode-choice input + label {
+    background-color: transparent;
+    transition: 	border-color .15s ease-out, 
+					color .25s ease-out, 
+					background-color .15s ease-out,
+					box-shadow .15s ease-out;
+}
+#game-mode-choice input:hover + label { border-color: #6c757d; }
+#game-mode-choice input:checked + label {
+    background-color: #e2e6ea;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#game-mode-choice input {
+    width: 0; 
+    height: 0; 
+    position: absolute; 
+    left: -9999px;
+}
+
+#game-mode-choic input.not-available {
+    background-image: linear-gradient(
+        to top right,
+        white 48%,
+        red,
+        white 52%
+      );
+}
+
+#meta-game {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#name-input-div, #playing-proposal-div, #winning-screen {
+    background-color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: calc(50% - 130px);
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding: 15px;
+}
+
+#name-input-div input {
+    width: 20vw;
+    margin: auto;
+}
+
+#winning-message {
+    font-size: 10vw;
+    font-weight: lighter;
+    display: block;
+}
+
+.gamerow {
+    height: calc(100% / 3);
+}
+
+.gamecol {
+    border: 1px rgba(0,0,0,0.05) solid
+}
+
+.symbol {
+    position: absolute;
+    top: 50%;
+    margin: auto;
+    height: 100px;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#connection-status {
+    float: right;
+    padding: 2%;
+}
+
+#gammode-status {
+    float: right;
+    padding: 2%;
+}
+
+#chat {
+    bottom: 0;
+}
+
+#chat-input {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    width: 87%;
+}
+
+#chat-output {
+    margin-top: 20%;    
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 70vh;
+}
+
+.chat-message {
+    position: relative;
+    padding: 0 0 0 0;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    width: max-content;
+    height: max-content;
+    word-wrap: break-word;
+    white-space: pre-line;
+    max-width: 95%;
+    clear: right;
+}
+
+.chat-message p {
+    margin: 4px;
+}
+
+.chat-server {
+    background-color: rgba(0, 0, 255, 0.05);
+}
+
+.chat-my-message {
+    float: right;
+    clear: right;
+    background-color: rgba(0, 255, 0, 0.05);
+    margin-right: 5%;
+    text-align: right;
+}
+
+.chat-opponent {
+    background-color: rgba(255, 0, 0, 0.05);
+}
+
+#current-symbol {
+    position: absolute;
+    left: 10px;
+    color: #495057;
+}
