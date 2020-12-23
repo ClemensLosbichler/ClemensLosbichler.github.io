@@ -1,8 +1,9 @@
 # ClemensLosbichler.github.io
 ## Setup
-In your nginx config add
+Copy all files from /conf to your /etc/nginx/sites-available
+Change in all copied files the root directive to the repo location
 ```sh
-include conf/website.conf;
+root    /home/pi/ClemensLosbichler.github.io/public;
 ```
 
 ## Start
