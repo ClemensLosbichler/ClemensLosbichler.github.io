@@ -1,6 +1,2 @@
 node_modules/*
-
 NGINX/*
-!NGINX/conf
-!NGINX/start.bat
-!NGINX/start.sh
