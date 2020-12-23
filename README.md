@@ -15,3 +15,8 @@ For Linux
 ```sh
 c:\xampp\php\php-cgi.exe -b 127.0.0.1:9000
 ```
+
+#### Node.js for tictactoe
+```sh
+node ../src/tictactoe-server.js
+```
