@@ -29,7 +29,7 @@
     }
 
     function echoFile($file, $path) {
-        $path != '/' ? $link = $path . '/' . $file : $link = $file;
+        $path != './' ? $link = $path . '/' . $file : $link = $file;
         $img = 'img/file.svg';
         $tmp = explode(".", $file);
         $extension = end($tmp);
