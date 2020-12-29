@@ -7,12 +7,16 @@ root    /home/pi/ClemensLosbichler.github.io/public;
 ```
 
 ## Start
+#### NGINX
+```sh
+sudo systemctl restart nginx
 #### PHP Fast-CGI
-For Windows
+```
+For Linux
 ```sh
 etc/php/7.2/fpm/php-cgi -b 127.0.0.1:9000
 ```
-For Linux
+For Windows
 ```sh
 c:\xampp\php\php-cgi.exe -b 127.0.0.1:9000
 ```
