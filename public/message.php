@@ -13,7 +13,6 @@
 <body>
   <?php include("header.php"); ?>
 
-
   <div class="container-fluid fill text-center" id="message-block">
     <div class="row h-100">
       <div class="col h-100 p-0">
