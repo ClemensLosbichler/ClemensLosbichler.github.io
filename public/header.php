@@ -12,6 +12,7 @@
     <div class="navbar-collapse collapse">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link" href="/tictactoe"><i class="fas fa-gamepad"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="/edit"><i class="fas fa-edit"></i></a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="/message"><i class="fas fa-font"></i></a></li> -->
         </ul>
     </div>
