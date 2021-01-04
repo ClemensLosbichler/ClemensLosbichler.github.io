@@ -11,12 +11,12 @@
       <div class="box-body"></div>
     </div>
   </div>
-  <div class="dropzone-wrapper">
+  <div class="dropzone-wrapper not-available">
     <div class="dropzone-desc">
       <i class="fas fa-upload"></i>
       <p>Choose an image file or drag it here.</p>
     </div>
-    <input type="file" name="img_logo" class="dropzone">
+    <input type="file" name="img_logo" class="dropzone" disabled>
     <canvas id="swirl"></canvas>
   </div>
 </form>

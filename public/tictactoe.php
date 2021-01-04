@@ -18,8 +18,8 @@
       <input placeholder="name" class="form-control d-inline" id="name-input">
       <input type="button" value="play" class="form-control d-inline" style="width: 5vw;" id="name-submit">
       <div id="game-mode-choice">
-        <input type="radio" name="game-mode" value="online" id="game-mode-online">
-        <label for="game-mode-online">Online</label> <!-- class="not-available"-->
+        <input type="radio" name="game-mode" value="online" id="game-mode-online" disabled="disabled">
+        <label for="game-mode-online" class="text-danger">Online</label> <!-- class="not-available"-->
 
         <input type="radio" name="game-mode" value="offline-human" id="game-mode-ai">
         <label for="game-mode-ai">Offline against Human</label>
@@ -45,17 +45,17 @@
 
   <div class="container-fuid fill">
     <div class="row h-100">
-      <div class="col-9">
+      <div class="col-12">
         <div class="h-100" id="game-area"></div>
       </div>
-      <div class="col-3 bg-light" id="chat">
+      <!--<div class="col-3 bg-light" id="chat">
         <div id="gammode-status">Waiting</div>
         <div id="connection-status">Disconnected</div>
         <div id="chat-output"></div>
         <div class="form-light">
           <input type="text" class="form-control" id="chat-input" width="auto">
         </div>
-      </div>
+      </div>-->
       <div id="current-symbol"></div>
     </div>
   </div>

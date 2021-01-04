@@ -1,4 +1,6 @@
 node_modules/*
 NGINX/*
+logs/access.log
+logs/error.log
 #public/files/*
 #!public/files/

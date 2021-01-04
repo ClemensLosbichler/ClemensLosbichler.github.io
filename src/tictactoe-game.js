@@ -67,12 +67,16 @@ class TicTacToeGame {
         });
 
         this.socket1.on('game', data => {
-            this.tictactoe.placeSymbol(data.x, data.y);
+            this.tictactoe.placeSymbol(this.tictactoe.field, data.x, data.y, this.tictactoe.currentPlayer);
             this.socket2.emit('game', data);
+            
+            console.log("server " + data);
         });
         this.socket2.on('game', data => {
-            this.tictactoe.placeSymbol(data.x, data.y);
+            this.tictactoe.placeSymbol(this.tictactoe.field, data.x, data.y, this.tictactoe.currentPlayer);
             this.socket1.emit('game', data);
+
+            console.log("server " + data);
         });
     }
 }

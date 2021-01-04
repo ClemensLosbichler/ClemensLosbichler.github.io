@@ -3,7 +3,7 @@
   <head>
     <?php include("meta.php"); ?>
 
-    <link rel="stylesheet" href="/css/filebrowser.css">
+    <link rel="stylesheet" href="/css/file-browser.css">
     <link rel="stylesheet" href="/css/upload.css">
     
     <title>Homepage</title>

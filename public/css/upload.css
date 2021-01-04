@@ -94,3 +94,12 @@
 .contextmenu .menu-options .menu-option:hover {
     background: rgba(0, 0, 0, 0.2);
 }
+
+.not-available {
+    background-image: linear-gradient(
+        to top right,
+        white 49%,
+        #dc3545,
+        white 50%
+      );
+}

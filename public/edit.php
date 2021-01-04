@@ -4,14 +4,24 @@
 <head>
   <?php include("meta.php"); ?>
 
+  <link rel="stylesheet" href="/css/file-editor.css">
+
   <title>Ideas</title>
 </head>
 
 <body>
   <?php include("header.php"); ?>
 
-  <div class="container-fuid fill">
-    <div class="row h-100">
+  <?php 
+    function fileEditor($path) {
+      echo "<textarea id='file-editor-$path' class='file-editor'>";
+      echo readFile($path);
+      echo "</textarea>";
+    }
+  ?>
+
+  <div class="container-fuid fill w-100">
+    <div class="row h-100 mx-auto w-75 mt-5 mb-5">
       <div class="col-12">
         <ul class="nav nav-tabs">
           <li class="nav-item">
@@ -24,15 +34,15 @@
             <a class="nav-link" id="access-tab" data-toggle="tab" href="#access" role="tab" aria-controls="access" aria-selected="false">access.log</a>
           </li>
         </ul>
-        <div class="tab-content">
+        <div class="tab-content h-100">
           <div class="tab-pane fade show active" id="ideas" role="tabpanel" aria-labelledby="ideas-tab">
-            <?php echo readfile('/files/ideas.txt'); ?>
+            <?php echo fileEditor('files/ideas.txt'); ?>
           </div>
-          <div class="tab-pane fade show active" id="ideas" role="tabpanel" aria-labelledby="error-tab">
-            <?php echo readfile('/files/ideas.txt'); ?>
+          <div class="tab-pane fade show" id="error" role="tabpanel" aria-labelledby="error-tab">
+            <?php echo fileEditor('../logs/error.log'); ?>
           </div>
-          <div class="tab-pane fade show active" id="ideas" role="tabpanel" aria-labelledby="access-tab">
-            <?php echo readfile('/files/ideas.txt'); ?>
+          <div class="tab-pane fade show" id="access" role="tabpanel" aria-labelledby="access-tab">
+            <?php echo fileEditor('../logs/access.log'); ?>
           </div>
         </div>
       </div>

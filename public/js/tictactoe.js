@@ -56,7 +56,6 @@ class TicTacToe {
             return false;
 
         field[i][j].content = currentPlayer;
-        // return field;
         return true;
     }
 

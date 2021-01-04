@@ -1,5 +1,5 @@
-let chatOutput = $('#chat-output');
-let chatInput = $('#chat-input');
+//let chatOutput = $('#chat-output');
+//let chatInput = $('#chat-input');
 
 let playerName = 'Player00';
 let gameMode = null;
@@ -15,20 +15,12 @@ function startOfflineHumanGame() {
     tictactoe.dCreateGameArea();
     tictactoe.lockSymbolPlacing('');
     tictactoe.setAi(false);
-    appendChatMessage({
-        information: 'Hello ' + playerName + ', you are playing against human.',
-        sender: 'Mr. Jänk'
-    });
 }
 
 function startOfflineAIGame() {
     tictactoe.dCreateGameArea();
     tictactoe.lockSymbolPlacing('o');
     tictactoe.setAi(true);
-    appendChatMessage({
-        information: 'Hello ' + playerName + ', you are playing against ai.',
-        sender: 'Mr. Jänk'
-    });
 }
 
 function startOnlineGame(symbol) {
@@ -66,7 +58,7 @@ function showProposal(name) {
     });
 }
 
-function connect() {
+function connectWebSocket() {
     socket = io.connect();
 
     $('#connection-status').html('Disconnected');
@@ -90,19 +82,6 @@ function connect() {
         $('#connection-status').html('Disconnected');
         startOfflineAIGame();
     });
-
-    if (gameMode == 'offline-ai') {
-        $('#gammode-status').html('Local against AI');
-        startOfflineAIGame();
-        return;
-    } else if (gameMode == 'offline-human') {
-        $('#gammode-status').html('Local against Human');
-        startOfflineHumanGame();
-        return;
-    } else if (gameMode == 'online') {
-        $('#gammode-status').html('Waiting for Opponnent');
-        startOfflineAIGame();
-    }
 
     socket.on('chat', function (data) {
         appendChatMessage(data);
@@ -146,7 +125,18 @@ function submitName() {
 
     playerName = name;
     gameMode = $("input[name='game-mode']:checked").val();
-    connect();
+
+    if(gameMode == 'online') {
+        connectWebSocket();
+        $('#gammode-status').html('Waiting for Opponnent');
+        startOfflineAIGame();
+    } else if (gameMode == 'offline-ai') {
+        $('#gammode-status').html('Local against AI');
+        startOfflineAIGame();
+    } else if (gameMode == 'offline-human') {
+        $('#gammode-status').html('Local against Human');
+        startOfflineHumanGame();
+    }
 }
 
 function appendChatMessage(message) {
